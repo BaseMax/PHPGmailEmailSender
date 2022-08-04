@@ -4,27 +4,26 @@ use PHPMailer\PHPMailer\Exception;
 
 $path_to = "PHPMailer";
 require "$path_to/src/Exception.php";
-require "$path_to/to/PHPMailer/src/PHPMailer.php";
-require "$path_to/to/PHPMailer/src/SMTP.php";
+require "$path_to/src/PHPMailer.php";
+require "$path_to/src/SMTP.php";
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPDebug = 1;
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = 'ssl'; // tls
+$mail->SMTPSecure = 'ssl';
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465;
 $mail->IsHTML(true);
-$mail->Username = "username@gmail.com";
+$mail->Username = "email@gmail.com";
 $mail->Password = "password";
-$mail->SetFrom("username@gmail.com");
+$mail->SetFrom("example@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = "hello";
-$mail->AddAddress("username@gmail.com");
+$mail->AddAddress("email@gmail.com");
 
-if (!$mail->Send()) {
+if(!$mail->Send()) {
    echo "Mailer Error: " . $mail->ErrorInfo;
-}
-else {
+} else {
    echo "Message has been sent";
 }
