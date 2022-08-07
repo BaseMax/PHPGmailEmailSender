@@ -20,6 +20,7 @@ $mail->Password = "xxxxxxxxxxxxxxxxxxxxxxxx";
 $mail->SetFrom($mail->Username, "Sender Name");
 $mail->Subject = "Test";
 $mail->CharSet = "UTF-8";
+$mail->addReplyTo('support@gmail.com', 'Information');
 
 $email = "xxxxxxxxxxxxxxx@gmail.com";
 $title = "Title";
