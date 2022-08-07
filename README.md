@@ -1,4 +1,4 @@
-# Gmail Email Sender
+# Gmail Email Sender by PHP
 
 A ready-to-use PHP script for sending Emails with an HTML Template will use a Gmail account as the sender and you will not need any email server.
 
